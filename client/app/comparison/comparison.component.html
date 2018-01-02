@@ -1,0 +1,33 @@
+<!--<div>
+
+First File : <input type="file" id="addFile" (change)="openFile($event,'first')" accept="text/xml"  /><br/>
+Second File : <input type="file" id="addFile" (change)="openFile($event, 'second')" accept="text/xml"  /><br/>
+<input type="button" value="Compare" (click)="comparison()" />
+
+</div>-->
+<div class="col-lg-12">
+    <div class="row">
+    <div class="col-lg-6 annotation-content">
+        <label for="addFile1" class="btn btn-primary">Add First File </label>
+        <input type="file" id="addFile1" (change)="openFile($event,'first')" accept="text/xml" style="visibility: hidden" />
+     <div id="content1" [innerHTML]="first"></div>
+   </div>
+    <div class="col-lg-6 annotation-content">
+        <label for="addFile2" class="btn btn-primary">Add Second File </label>
+        <input type="file" id="addFile2" (change)="openFile($event,'second')" accept="text/xml" style="visibility: hidden" />
+    <div id="content2" [innerHTML]="second"></div>
+    </div>
+  </div>
+</div>
+<div class="col-lg-12">
+    <hr/>
+    <div class="row">
+    <div class="col-lg-6 annotation-content">
+        
+        <input type="button" class="btn btn-primary" value="Compare" (click)="comparison()" /><br/><br/>
+        <div id="content2" [innerHTML]="compared"></div>
+        <br/>
+        <input type="button" class="btn btn-primary" value="Download Compared File" (click)="createNewFile()" />
+    </div>
+    </div>
+</div>    

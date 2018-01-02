@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<!-- <header class="annotator-main-header">
+  <h1>Annotator demonstration</h1>
+</header> -->
+<!-- This here is the actual popup and links to social media -->
+<!-- <div class="js-popper share-highlight__tooltip" [style.display]="getStyle()">{{selectedtext}}
+</div> -->
+
+<div class="container ">
+   
+   
+</div>
+<div class="container-fluid">
+  
+  <div class="row">
+    
+    <div (mouseup)="showSelectedText($event)" class="col-lg-8 annotation-content">
+        <label for="addFile" class="btn btn-primary">Add File </label>
+        <input type="file" id="addFile" (change)="openFile($event)" accept="text/xml" style="visibility: hidden" />
+        <div id="content" [innerHTML]="report"></div>
+    </div>
+
+    <div class="col-lg-4 panel panel-default" style="border-left: 2px solid #337ab7; padding: 20px;">
+
+      <!-- <div class="card " style="width: 20rem;" *ngFor="let a of [1,2,3,4,5,6]">
+   
+      <div class="card-block">
+        <h4 class="card-title">Special title treatment</h4>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    
+  </div> -->
+      <!-- <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search for...">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">Go!</button>
+        </span>
+      </div> -->
+
+      <!-- <div class="list-group" style="margin-top:20px">
+      <a href="#" class="list-group-item active">
+        Annotations
+      </a>
+      <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+      <a href="#" class="list-group-item">Morbi leo risus</a>
+      <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+      <a href="#" class="list-group-item">Vestibulum at eros</a>
+  </div> -->
+
+      <!-- <div class="dropdown">
+      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        Tags
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+        <li><a href="#">corporation</a></li>
+        <li><a href="#">exchange</a></li>
+        <li><a href="#">EquityMetric</a></li>
+
+        <li><a href="#">Upgrade</a></li>
+        <li><a href="#">pricetarget</a></li>
+      </ul>
+    </div> -->
+    <!-- <div>
+      <label>Concept ID</label>
+      <select class="form-control">
+        <option>None</option>
+        <option>Price Target</option>
+        <option>Price Target</option>
+        
+
+      </select>
+    </div>
+
+
+      <div >
+        <label>Tags</label>
+        <select class="form-control">
+          <option>corporation</option>
+          <option>exchange</option>
+          <option>EquityMetric</option>
+          <option>Upgrade</option>
+          <option>pricetarget</option>
+
+        </select>
+      </div>
+      <div>
+          <label>Tags-V1</label>
+           <div class="annotator-tag-container">
+              <div class="annotator-tag-capsule">BOND <span>X</span></div>
+              <div class="annotator-tag-capsule">BOND <span>X</span></div>
+              <div class="annotator-tag-capsule">BOND <span>X</span></div>
+              <div class="annotator-tag-capsule">BOND <span>X</span></div>
+              <div class="annotator-tag-capsule">BOND <span>X</span></div>
+
+           </div>
+            
+        
+       
+      </div>
+      <div>
+        <input type="text" class="form-control" placeholder="comment...">
+        
+      </div> -->
+      <div>
+        <rightsidebar [selectedData]="selectedtext" [startPoint]="startPoint" [endPoint]="endPoint" [formDefaults]="classes" (reloadXML)="reloadFropmLocalStorage()"></rightsidebar>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <file-upload
+[allowedTypes]="allowedTypes"
+allowedSize="15" // MB
+(onUploadFiles)="onUploadFiles($event)"
+>
+</file-upload> -->

@@ -1,0 +1,80 @@
+$icon-font-path: '/assets/fonts/bootstrap/';
+@import '~bootstrap-sass/assets/stylesheets/bootstrap';
+$fa-font-path: '/assets/fonts/font-awesome/';
+@import '~font-awesome/scss/font-awesome';
+
+// @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,900|Roboto:300,500,700,900);
+
+/**
+ * App-wide Styles
+ */
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+
+[hidden] {
+  display: none !important;
+}
+
+.ng-valid[required], .ng-valid.required  {
+  border-left: 5px solid #42A948; /* green */
+}
+
+.ng-invalid:not(form)  {
+  border-left: 5px solid #a94442; /* red */
+}
+.navbar-bottom-margin{
+  margin-bottom: 0px !important;
+}
+
+.corporation{
+  color: #FFF;
+  background: rgb(115, 128, 0) !important;
+}
+.exchange{
+    background: rgb(0, 60, 128) !important;
+    color: #FFF;
+    
+}
+ .EquityMetric{
+    
+      background: rgb(90, 14, 14) !important;
+      color: #FFF;
+}
+.Upgrade{
+      
+  background: rgb(0, 128, 58) !important;
+        color: #FFF;
+}
+.pricetarget{
+  
+  background: rgb(128, 0, 70) !important;
+  color: #FFF;
+}
+.multipletag{
+	background-color: #FFFF0A !important;
+	border-bottom:1px solid #ff7e00;
+}
+.multiplecomment{
+	background-color: #00FF00 !important;
+	border-bottom:1px solid #ff7e00;
+}
+.aligncenter{
+  text-align: center !important;
+}
+
+.rightside-form-label {
+  text-align: left !important;
+  padding-left: 20px;
+}
+
+.rightside-form-field-padding {
+  padding-right: 20px;
+}
+
+@import 'admin/admin.scss';

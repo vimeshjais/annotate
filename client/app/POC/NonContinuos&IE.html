@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<body onmousedown="isKeyPressed(event)">
+ 
+<p>First select the data and then press alt</p>
+<h4> Dummy data</h4>
+<p >
+ 
+A pure pipe is only called when Angular detects a change in the value or the parameters passed to a pipe. An impure pipe is called for every change detection cycle no matter whether the value or parameters changes.
+ 
+</p>
+ <p>End of the brower window </p>
+<script>
+function isKeyPressed(event) {
+     if (event.altKey) {
+         /*mark the selected element when alt is pressed*/
+           if (window.getSelection) {  
+                var range = window.getSelection ().getRangeAt(0);
+                 
+             
+            var newNode = document.createElement("mark");
+            range.surroundContents(newNode);
+                
+                
+                
+                
+            } 
+            else {
+               if (document.selection.createRange) { // Internet Explorer
+                  var range = document.selection.createRange ();
+                  alert (range.text);
+				  console.log(range.text);
+              }
+           }
+    }else{
+        /*unmark the selected elements when ctrl is not pressed*/
+        var element = document.getElementsByTagName("mark"), index;
+        for (index = element.length - 1; index >= 0; index--) {
+            element[index].parentNode.insertBefore(document.createTextNode(element[index].textContent), element[index]);
+            element[index].parentNode.removeChild(element[index]);
+        }
+    }
+}
+</script>
+ 
+</body>
+</html>

@@ -1,0 +1,49 @@
+<div class="row">
+    <form class="form-horizontal" [formGroup]="tagSelection" >
+       <div class="form-group">
+            <label for="conceptId" class="col-xs-4 col-sm-4 col-md-4 col-lg-4 control-label rightside-form-label">Concept Id</label>
+            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 rightside-form-field-padding">
+                <select name="" id="conceptId" class="form-control" formControlName="conceptId">
+                 <option *ngFor="let id of selectConceptId" [value]= "id.Id">
+                    {{id.conceptTag}}
+                </option>
+            </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="tagId" class="col-xs-4 col-sm-4 col-md-4 col-lg-4 control-label rightside-form-label">Tags </label>
+            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 rightside-form-field-padding">
+                <select name="" id="tagId" class="form-control" #tags formControlName="tagId" (change)="changeTag($event.target.value)"
+                [ngClass]="tagClass" >
+                <option *ngFor="let tag of selectTags" value= {{tag.tag}} [ngClass]="tag.tag" [attr.name]="tag.tag" >
+                    {{tag.tag}}
+                </option>
+            </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="selectedText" class="col-xs-4 col-sm-4 col-md-4 col-lg-4 control-label rightside-form-label">Selected Text</label>
+            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 rightside-form-field-padding">
+                <!-- <input type="text" name="" id="selectedText" class="form-control"  formControlName="selectedText" readonly> -->
+                <textarea name="" cols="40" rows="5" id="selectedText" class="form-control"  formControlName="selectedText" readonly></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="comments" class="col-xs-4 col-sm-4 col-md-4 col-lg-4 control-label rightside-form-label">Comments</label>
+            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 rightside-form-field-padding">
+                <!-- <input type="text" name="" id="comments" class="form-control" value="" formControlName="comment"> -->
+                <textarea name="" cols="40" rows="5" id="comments" class="form-control" value="" formControlName="comment" required></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-sm-offset-4">
+                <button type="submit" class="btn btn-primary" (click)="saveData()">Save</button>
+                <button type="button" class="btn btn-default" (click)="clear()">Clear</button>
+                <button type="button" class="btn btn-success" (click)="finalSave()">Complete</button>
+            </div>
+        </div>
+    </form>
+</div>
+<!-- {{startPoint}}
+{{endPoint}}
+{{formDefaults | json}} -->
