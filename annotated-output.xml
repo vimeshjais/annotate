@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fin-corpus SYSTEM "D:\AI-ML\Morgan\Annotation\created-sample\sample1.dtd">
+<fin-corpus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<report>
+	Costco's (NASDAQ:COST) low-price, membership-based operating model has helped it avoid the worst of those problems so far. But its latest operating results show that the business isn't immune from the broader industry slowdown.
+	Here's a look at the key trends that dominated the fiscal year that the warehouse giant just closed.
+	1. Sales growth
+	
+	CHART BY AUTHOR. DATA SOURCE: COSTCO FILINGS.
+	Comparable-store sales growth of 4% was enough to keep Costco solidly ahead of its major retailing peers. Wal-Mart (NYSE:WMT) and Target (NYSE:TGT) are growing comps by less than 2% these days, and Kroger's (NYSE:KR) expansion pace has collapsed to below 1% from over 5% two years ago. Based on this research we recommend not to buy Walmart.
+	Still, Costco's sales improvement matches its worst result since the 2008 recession. The company just doesn't endure multiyear stretches of 5% or lower comps gains like the one shareholders are currently witnessing. That could explain why management is attacking the e-commerce sales channel with more urgency right now.
+	2. Net income
+	The beauty of Costco's subscription model is that earnings are tied to membership fees and so they tend to march higher even during periods of weaker sales growth. That's exactly what happened this past year, when membership fees rose to $2.85 billion from $2.65 billion in the prior year.
+	The spike allowed earnings to rise 14% to over $6 per share at a time when most rivals, including Wal-Mart, Target, and Kroger, are posting lower profits as they invest more heavily in price cuts.
+	PT: Our research shows that COSTCO can go up 10% in next 4 quarters. 
+	Update: Upgrade price target to $75 on strong earnings
+	So we have changed the recommendation from HOLD to BUY.
+	Another way to take a position in this stock is to buy Costco Bonds.
+	</report>
+	<annotations>
+		<named-entities>
+			<NE id="N0" conceptID="145: Company Name" start="1" end="7" text="Costco" type="corporation"/>
+			<NE id="N1" start="11" end="17" text="NASDAQ" type="exchange"/>
+			<NE id="N2" start="518" end="522" text="NYSE" type="exchange"/>
+			<NE id="N3" start="1485" end="1491" text="Target" type="corporation"/>
+			<NE id="N4" start="508" end="516" text="Wal-Mart" type="corporation"/>
+			<NE id="N5" start="1497" end="1503" text="Kroger" type="corporation"/>
+			<NE id="N6" conceptID="2043: Price Target" start="1576" end="1578" text="PT" type="EquityMetric"/>
+			<NE id="N7" start="1656" end="1663" text="Upgrade" type="Upgrade"/>
+			<NE id="N8" start="1664" end="1676" text="price target" type="pricetarget"/>
+		</named-entities>
+		<tags>
+			<tag id="I0" start="1644" end="1699" negation="false" text="So we have changed the recommendation from HOLD to BUY" type="Bullish"/>
+			<tag id="I1" start="508" end="516" text="Wal-Mart" comment="mark with competitor tag" type="to-do"/>
+			<tag id="I2" start="688" end="743" negation="true" text="Based on this research we recommend not to buy Walmart." type="Bullish"/>
+			<tag id="I3" start="23" end="32" text="low-price" type="to-do" />
+		</tags>
+		<relations>
+			<L-LINK id="L0" fromID="N0" toID="N4" directional="false" relationship="competition"/>
+			<L-LINK id="L1" fromID="N0" toID="N1" directional="true" relationship="listed-in"/>
+			<L-LINK id="L2" fromID="N7" toID="N8" directional="true" relationship="has_update"/>
+		</relations>
+	</annotations>
+</fin-corpus>
