@@ -27,7 +27,7 @@
     "express-fileupload": "^0.3.0",
     "express-jwt": "^5.0.0",
     "express-session": "^1.11.3",
-    "fast-json-patch": "^2.0.5",
+    "fast-json-patch": "^3.1.1",
     "gulp": "^3.9.1",
     "ibm_db": "^2.2.1",
     "jquery": "^3.2.1",
